@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MARS</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Mission to mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrap new Data</a></p>
+    </div>
+
+    <!-- Craigslist Listings -->
+    <div class="row" id="craiglist-listings">
+      <div class="col-md-6">
+        <h4 class="heading">{{listings.news_title}}</h4>
+        <small>{{listings.article_body}}</small>
+      </div>
+      <div class = "col-md-12">
+        <small>most recent pic on Nasa</small>
+        <img src='{{listings.picture}}'>
+      </div>
+
+      <div class="col-md-6"> {{ listings.table | safe}}
+      </div> 
+      <div class="col-md-6">
+          <h4>Most Recent info from twitter:</h1>
+          <h4>{{listings.twiiter}}</h1> 
+      </div> 
+      <div class = "col-md-12">
+          <h2>Mars Hemispheres</h2>
+      </div>
+      <div class = "col-md-6">
+          <img src='{{listings.picture2}}'height="400">
+      </div>
+
+      <div class = "col-md-6">
+          <img src='{{listings.picture3}}' height="400">
+      </div>
+
+      <div class = "col-md-6">
+          <img src='{{listings.picture4}}'height="400">
+      </div>
+
+      <div class = "col-md-6">
+          <img src='{{listings.picture5}}'height="400">
+      </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
+
+
+
